@@ -1,4 +1,4 @@
-# AudioGenie-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning
+# ⚡ AudioGenie-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning
 
 [![arXiv](https://img.shields.io/badge/arXiv-2509.16971-brightgreen.svg?style=flat-square)](https://arxiv.org/pdf/2509.16971) 
 
