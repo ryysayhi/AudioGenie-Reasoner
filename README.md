@@ -2,6 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2509.16971-brightgreen.svg?style=flat-square)](https://arxiv.org/pdf/2509.16971) 
 [![github](https://img.shields.io/badge/GitHub-Code-blue?logo=Github&style=flat-square)](https://github.com/ryysayhi/AudioGenie-Reasoner)
+
 ---
 
 **This is the official repository for "[AudioGenie-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning](https://arxiv.org/pdf/2509.16971)".**
