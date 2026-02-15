@@ -58,8 +58,7 @@ class AugmentationRunner:
             typ = (step.get("type") or "").lower()
             instr = step.get("instructions") or ""
             questions = step.get("questions") or []
-
-            # print(f"[augment step] type={typ} q_count={len(questions)}")
+            print(f"[augment step] type={typ} q_count={len(questions)}")
 
             if typ == "audio_qa":
                 qa = self.allm.audio_qa(audio_path, questions or ["What detail is missing?"])
