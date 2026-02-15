@@ -59,8 +59,7 @@ class AugmentationRunner:
             instr = step.get("instructions") or ""
             questions = step.get("questions") or []
 
-            # 轻量日志，帮助你定位是否卡在这里
-            print(f"[augment step] type={typ} q_count={len(questions)}")
+            # print(f"[augment step] type={typ} q_count={len(questions)}")
 
             if typ == "audio_qa":
                 qa = self.allm.audio_qa(audio_path, questions or ["What detail is missing?"])
@@ -76,7 +75,7 @@ class AugmentationRunner:
                         # tr = (res.get("text") or "").strip() or "[inaudible]"
                         tr = _format_whisper_segments(res, max_chars=1200, gap_newline=0.8)
                     else:
-                        # 没有 whisper 实例就回退 Dasheng
+                        # 没有 whisper 实例就回退ALLM
                         tr = self.allm.transcribe(audio_path, hint=instr)
                 except Exception as e:
                     print(f"[warn] whisper transcribe failed: {type(e).__name__}: {e}  → fallback to ALLM")
