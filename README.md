@@ -7,6 +7,7 @@
 **This is the official repository for "[AudioGenie-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning](https://arxiv.org/pdf/2509.16971)".**
 
 ## 🚀 Roadmap
+- **2026-01**: AudioGenie-Reasoner has been accepted by ICASSP 2026. The code has been released!
 - **2025-09**: AudioGenie-Reasoner is released on arXiv.
 
 
@@ -35,7 +36,24 @@ Experimental results show that AGR achieves state-of-the-art (SOTA) performance 
 
 
 ## 🎯 Code
-Coming soon.
+- Set your API key for GPT-4o in `scripts/run_reasoner.py` (or export it as an env var).
+```bash
+# line 69
+YOUR_API_KEY = "" # input your api key here
+```
+
+- Run the inference script:
+```bash
+python scripts/run_reasoner.py \
+  --base_dir LLM/benchmark/MMAR \
+  --input_json MMAR-meta-new.json \
+  --audio_dir data/audio \
+  --output_dir LLM/dasheng-lm/result \
+  --output_json dasheng-MMAR-multiagent.json \
+  --model_id mispeech/midashenglm-7b \
+  --deepseek_model gpt-4o-2024-08-06 \
+  --max_iters 3
+```
 
 ## 📭 Contact
 
